@@ -1,0 +1,58 @@
+[
+  {
+    "Description": "Cross CR 523 at Prairie Lakes entrance.",
+    "Dist": 0.8,
+    "SN": 0,
+    "Wypt": "33-5",
+    "NS": 203.2,
+    "Index": 0
+  },
+  {
+    "Description": "South jct with stream.",
+    "Dist": 0.3,
+    "SN": 0.8,
+    "Wypt": "",
+    "NS": 202.4,
+    "Index": 1
+  },
+  {
+    "Description": "Follow along stream off and on, usually W.",
+    "Dist": "",
+    "SN": "",
+    "Wypt": "",
+    "NS": "",
+    "Index": 2
+  },
+  {
+    "Description": "North jct with stream.",
+    "Dist": 0.1,
+    "SN": 1.1,
+    "Wypt": "",
+    "NS": 202.1,
+    "Index": 3
+  },
+  {
+    "Description": "Cross WMA Road 3 (loop access road).",
+    "Dist": 0.8,
+    "SN": 1.2,
+    "Wypt": "",
+    "NS": 202,
+    "Index": 4
+  },
+  {
+    "Description": "Cross WMA Road 3 (loop access road).",
+    "Dist": 1.2,
+    "SN": 2,
+    "Wypt": "",
+    "NS": 201.2,
+    "Index": 5
+  },
+  {
+    "Description": "Jct trail and Williams Rd.",
+    "Dist": 0.1,
+    "SN": 3.2,
+    "Wypt": "33-6",
+    "NS": 200,
+    "Index": 6
+  }
+]
