@@ -8,17 +8,16 @@ writeDatabookObjectToJson(parsedData);
 //=============================================================================================================
 //=============================================================================================================
 function parseDatabook(rawDataBook) {
-  var totalDatabookPoints = Object.keys(rawDataBook).length;
-  var newDatabookObj = [rawDataBook[0]];
-  var mergeDescription = databookDescriptionMerge(rawDataBook, newDatabookObj, totalDatabookPoints);
+  let newDatabookObj = [rawDataBook[0]];
+  let mergeDescription = databookDescriptionMerge(rawDataBook, newDatabookObj);
   return mergeDescription;
 }
 
 //===========================================================================================================
 
 function writeDatabookObjectToJson(databookObj) {
-  var JsonString = JSON.stringify(databookObj, null, 2);
-  fs.writeFile("datbook_description_merge.json", JsonString, 'utf8', (err) => {
+  let JsonString = JSON.stringify(databookObj, null, 2);
+  fs.writeFile("databook_description_merge.json", JsonString, 'utf8', (err) => {
     if (err) {
       console.log("An error occured while writing JSON Object to File.");
       return console.log(err);
@@ -29,9 +28,11 @@ function writeDatabookObjectToJson(databookObj) {
 
 //=======================================================================================================
 
-function databookDescriptionMerge(rawDataObj, newDataObj, totalDataPoints) {
+function databookDescriptionMerge(rawDataObj, newDataObj) {
+  let totalDataPoints = Object.keys(rawDataObj).length;
   for (let i = 1; i < totalDataPoints; i++) {
-    if (!rawDataObj[i].Dist && !rawDataObj[i].NS && !rawDataObj[i].SN) {
+    let { Dist, NS, SN } = rawDataObj[i];
+    if (!Dist && !NS && !SN) {
       let lastEntryIdx = Object.keys(newDataObj).length - 1;
       let lastEntry = newDataObj[lastEntryIdx];
       let newDescription = lastEntry.Description + ' ' + rawDataObj[i].Description;
